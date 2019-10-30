@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/appbg"
+
+
+    tools:context="com.jayantagogoi.tnspractise.Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/logologin"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        >
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:background="@drawable/reg"
+            android:onClick="registerMe"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/btn_register"
+           />
+    </LinearLayout>
+
+    <!-- firs time Login -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:id="@+id/pnl_FirstLogin"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUID"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:layout_gravity="center_horizontal"
+            android:focusable="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txtboxstyle"
+            android:text="" />
+
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:ems="10"
+            android:text=""
+            android:id="@+id/txtPWD"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txtboxstyle"
+            android:imeOptions="actionDone"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:text="Login"
+            android:id="@+id/button"
+            android:background="@drawable/buttonstyle"
+            android:onClick="onLoginPerform"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Forgot Password"
+            android:onClick="forgotPwd"
+            android:id="@+id/button3"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <!-- Continue time Login -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:id="@+id/pnl_ContinueLogin"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_continue"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/txtboxstyle"
+            android:layout_marginBottom="10dp"
+            android:text="Continue" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:text="Continue"
+            android:id="@+id/btnContinue"
+            android:background="@drawable/buttonstyle"
+            android:onClick="onContinue"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Not you!"
+            android:onClick="onNotYou"
+            android:id="@+id/btnNotYou"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

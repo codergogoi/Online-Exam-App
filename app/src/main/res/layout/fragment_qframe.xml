@@ -1,0 +1,168 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jayantagogoi.tnspractise.QframeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/e_qlayout"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/e_qdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollHorizontally="true"
+            android:textSize="12dp"
+            android:text="Hello how are you student? Hello how are you student? Hello how are you student? Hello how are you student? Hello how are you student?"/>
+
+
+    </LinearLayout>
+
+    <!-- Question options start here -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:id="@+id/e_opLayout"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <!-- Options -->
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="match_parent"
+            android:id="@+id/e_options"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- fib -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                 android:id="@+id/e_fib">
+
+                <EditText
+                    android:id="@+id/e_fibText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:singleLine="false"
+                    android:hint="Fill in the blanks"/>
+
+            </LinearLayout>
+            <LinearLayout android:id="@+id/ans_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/e_ans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:enabled="false"
+
+                    />
+
+                </LinearLayout>
+
+            <!-- mcq -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/e_mcq"
+                >
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/e_opSelect">
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollHorizontally="true"
+                            android:text="Option 1"
+                            android:id="@+id/op_1"
+                            android:textSize="12sp"
+                            android:singleLine="false"
+                            android:layout_marginBottom="10dip" />
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollHorizontally="true"
+                            android:text="Option 2"
+                            android:id="@+id/op_2"
+                            android:textSize="12sp"
+                            android:singleLine="false"
+                            android:layout_marginBottom="10dip" />
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollHorizontally="true"
+                            android:text="Option 3"
+                            android:id="@+id/op_3"
+                            android:textSize="12sp"
+                            android:singleLine="false"
+                            android:layout_marginBottom="10dip" />
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollHorizontally="true"
+                            android:text="Option 4"
+                            android:id="@+id/op_4"
+                            android:textSize="12sp"
+                            android:singleLine="false"
+                            android:layout_marginBottom="10dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <!-- Image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/e_imgs"
+            android:visibility="visible"
+            android:orientation="vertical"
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/e_imgDetails"
+                android:scaleType="fitXY"
+                android:layout_gravity="top"
+                android:src="@drawable/loading" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/e_qsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:visibility="invisible"
+            />
+
+
+    </LinearLayout>
+
+    <!--  Question options end here-->
+
+
+
+</LinearLayout>

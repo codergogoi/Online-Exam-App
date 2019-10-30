@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jayantagogoi.tnspractise.Dashboard"
+    android:weightSum="1"
+    android:background="@color/bgcolor"
+    android:baselineAligned="false">
+
+
+    <!-- Menu bar -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+         android:background="@drawable/sidebarstyle">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Exam List"
+             android:onClick="examListView"
+            android:id="@+id/exam_list"
+            android:textColor="@color/white"
+            android:background="@drawable/sidebarbutton"
+             android:visibility="visible" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Generate QPaper"
+            android:id="@+id/btngnerate_qp"
+            android:onClick="generateQpaper"
+            android:textColor="@color/white"
+            android:background="@drawable/sidebarbutton"
+             android:visibility="visible" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Appear Test"
+            android:onClick="schedulePaperNow"
+            android:id="@+id/btnappear_test"
+            android:textColor="@color/white"
+            android:background="@drawable/sidebarbutton"
+             android:visibility="visible" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:onClick="settings"
+            android:background="@drawable/sidebarbutton"
+             android:id="@+id/btnSettings"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Contact Us"
+            android:textColor="@color/white"
+            android:onClick="contactUs"
+            android:background="@drawable/sidebarbutton"
+            android:id="@+id/btnContactus"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:onClick="onLogout"
+            android:background="@drawable/sidebarbutton"
+            android:id="@+id/btnLogout"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- content -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@color/bgcolor">
+
+        <!-- Title Bar with Timer-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tns_db">
+
+
+            <TextView
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Welcome, "
+                android:textStyle="bold"
+                android:id="@+id/std_name" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:text="00:00"
+                android:id="@+id/timer_info" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/panelbg"
+            android:layout_margin="5dp"
+            android:id="@+id/db_content"
+             android:weightSum="1">
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r_type">
+                <RadioButton
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:text="Practise TEST"
+                    android:id="@+id/r_1"
+                    android:visibility="visible" />
+                <RadioButton
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                     android:checked="true"
+                    android:text="School TEST"
+                    android:id="@+id/r_0"
+                    android:visibility="visible" />
+
+            </RadioGroup>
+
+            <Spinner
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/subject_list"
+                android:entries="@array/subject_name"
+                android:layout_weight="0.43"
+                android:spinnerMode="dialog" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/db_content"
+            android:background="@drawable/panelbg"
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+
+            android:layout_alignParentStart="true">
+            <Spinner
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/paper_list"
+                android:entries="@array/subject_name"
+                android:layout_weight="0.42"
+                style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                android:spinnerMode="dialog" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View"
+                android:enabled="false"
+                android:id="@+id/get_report"
+                android:onClick="viewReport"
+                android:background="@drawable/buttonstyle"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.07" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

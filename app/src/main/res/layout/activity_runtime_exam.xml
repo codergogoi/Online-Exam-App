@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="horizontal"
+
+    tools:context="com.jayantagogoi.tnspractise.RuntimeExam">
+
+    <!-- Title Bar Control panel-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/exam_bg3"
+        android:visibility="gone"
+        android:layout_below="@+id/db_cpanel"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+             android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:text="Exam is Paused..."
+           />
+
+
+        <Button
+
+            android:id="@+id/btn_resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:onClick="pause"
+            android:layout_gravity="center"
+            android:text="  Click to Resume  "
+            android:background="@drawable/buttonstyle"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+    <!-- Menu bar -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:id="@+id/exam_bg1"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/q_finis">
+
+        </LinearLayout>
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/q_code">
+
+            <GridView
+                android:layout_marginTop="40dp"
+                android:id="@+id/q_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="4"
+                android:stretchMode="spacingWidth"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:choiceMode="multipleChoice"
+                android:clickable="false"
+                android:verticalSpacing="2dp"
+                android:columnWidth="40dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- content -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/exam_bg2"
+        >
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:id="@+id/tns_db">
+
+            <!-- Title Bar with Timer-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tns_timer">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Remaining : 11:30"
+                    android:layout_marginTop="5dp"
+                     android:id="@+id/timer_info" />
+            </LinearLayout>
+
+
+            <!-- Title Bar Control panel-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:layout_below="@+id/db_cpanel"
+                >
+                <Button
+
+                    android:id="@+id/btn_pause"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="pause"
+                    android:text="Pause"
+                    android:background="@drawable/buttonstyle"
+                    />
+
+                <Button
+
+                    android:id="@+id/btn_prev"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="prevClick"
+                    android:text="Prev"
+                    android:background="@drawable/buttonstyle"
+                    />
+
+
+                <Button
+
+                    android:id="@+id/btn_next"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="nextClick"
+                    android:text="Next"
+                    android:background="@drawable/buttonstyle"
+                    />
+
+                <Button
+
+                    android:id="@+id/btn_Finished"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="finishedExam"
+                    android:text="Finish"
+                    android:background="@drawable/buttonstyle"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:layout_below="@+id/db_content"
+            android:layout_margin="10dp"
+            >
+
+            <android.support.v4.view.ViewPager
+
+                android:id="@+id/question_viewer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panelbg"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

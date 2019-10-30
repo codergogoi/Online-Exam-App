@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context="com.jayantagogoi.tnspractise.SchedulePaper">
+
+    <!-- content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <!-- Title Bar with Timer-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/tns_db">
+
+
+            <TextView
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Welcome, Jayanta"
+                android:id="@+id/std_name_schedule" />
+
+        </LinearLayout>
+
+
+
+
+
+        <!-- content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:id="@+id/db_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panelbg"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Select Subject"
+                    android:layout_gravity="center"
+                    android:id="@+id/lblSubject" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panelbg"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:id="@+id/spn_subjectList_sp"
+                    android:entries="@array/subject_name"
+                    android:layout_gravity="center"
+                    android:spinnerMode="dialog" />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panelbg"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Select Paper"
+                    android:layout_gravity="center"
+                    android:id="@+id/lblpaper" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panelbg"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                    <!--
+
+                -->
+
+
+                    <Spinner
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/spin_paperlist_sp"
+                    android:layout_gravity="center"
+                    android:entries="@array/subject_name"
+                    android:spinnerMode="dialog" />
+
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/btn_appeartest"
+                            android:layout_gravity="center"
+                            android:onClick="startExam"
+                            android:text="Appear Test"
+                            android:background="@drawable/buttonstyle"
+                            android:enabled="true" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
